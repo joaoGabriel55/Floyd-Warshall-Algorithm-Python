@@ -3,7 +3,13 @@ import numpy
 INF = 99999
 V = 0
 
-f = open("input.txt", "r")
+op = input(
+    "Choose the file (1 - Graph without Negative Cycles or 2 - Graph with Negative Cycles):")
+f = None
+if int(op) == 1:
+      f = open("input.txt", "r")
+elif int(op) == 2:
+      f = open("inputNegativeCycle.txt", "r")
 
 inputFile = f.readlines()
 
